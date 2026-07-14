@@ -1,0 +1,278 @@
+/* ========================================
+   Halil AKIN Personal Website
+   Version: 1.0.0
+   ======================================== */
+
+:root {
+    --bg: #f7f7f8;
+    --surface: #ffffff;
+
+    --text: #111827;
+    --text-secondary: #6b7280;
+
+    --border: #e5e7eb;
+
+    --primary: #111827;
+    --primary-hover: #000000;
+
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+
+    --radius: 22px;
+
+    --transition: .25s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+
+    :root {
+
+        --bg: #0f1115;
+        --surface: #181b20;
+
+        --text: #f4f4f5;
+        --text-secondary: #b4b7be;
+
+        --border: #2b3138;
+
+        --primary: #ffffff;
+        --primary-hover: #ececec;
+
+        --shadow: none;
+
+    }
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Inter',sans-serif;
+
+    background:var(--bg);
+
+    color:var(--text);
+
+    line-height:1.7;
+
+    padding:32px 20px 64px;
+
+}
+
+main,
+header,
+footer{
+
+    width:min(680px,100%);
+    margin:auto;
+
+}
+
+.hero{
+
+    text-align:center;
+
+    margin-bottom:42px;
+
+}
+
+.logo{
+
+    width:88px;
+    height:88px;
+
+    margin:0 auto 28px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    color:var(--bg);
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    font-size:34px;
+    font-weight:700;
+
+    letter-spacing:2px;
+
+}
+
+h1{
+
+    font-size:40px;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+
+}
+
+.title{
+
+    font-size:21px;
+
+    color:var(--text-secondary);
+
+    margin-bottom:6px;
+
+}
+
+.company{
+
+    color:var(--text-secondary);
+
+}
+
+.actions{
+
+    display:grid;
+
+    gap:14px;
+
+    margin-bottom:34px;
+
+}
+
+.button{
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    min-height:56px;
+
+    background:var(--primary);
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:18px;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+@media (prefers-color-scheme: dark){
+
+.button{
+
+    color:#111;
+
+}
+
+}
+
+.button:hover{
+
+    transform:translateY(-2px);
+
+    opacity:.96;
+
+}
+
+.button:active{
+
+    transform:scale(.98);
+
+}
+
+.card{
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+    padding:26px;
+
+    margin-bottom:20px;
+
+}
+
+.card h2{
+
+    font-size:22px;
+
+    margin-bottom:18px;
+
+}
+
+.card p{
+
+    color:var(--text-secondary);
+
+}
+
+.card ul{
+
+    padding-left:20px;
+
+}
+
+.card li{
+
+    margin-bottom:10px;
+
+}
+
+footer{
+
+    margin-top:56px;
+
+    text-align:center;
+
+    color:var(--text-secondary);
+
+    font-size:14px;
+
+}
+
+@media (min-width:768px){
+
+body{
+
+    padding:56px 28px 80px;
+
+}
+
+.hero{
+
+    margin-bottom:52px;
+
+}
+
+.logo{
+
+    width:100px;
+    height:100px;
+
+    font-size:38px;
+
+}
+
+.button{
+
+    font-size:17px;
+
+}
+
+}
