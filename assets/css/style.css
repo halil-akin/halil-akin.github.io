@@ -1,178 +1,191 @@
-/* ========================================
-   Halil AKIN Personal Website
-   Version: 1.0.0
-   ======================================== */
+/* ==========================================
+   Halil AKIN
+   Personal Brand System
+   Version: 1.1.0
+========================================== */
 
-:root {
-    --bg: #f7f7f8;
-    --surface: #ffffff;
+:root{
 
-    --text: #111827;
-    --text-secondary: #6b7280;
+    --bg:#F5F5F7;
+    --surface:#FFFFFF;
 
-    --border: #e5e7eb;
+    --text:#111827;
+    --muted:#6B7280;
 
-    --primary: #111827;
-    --primary-hover: #000000;
+    --border:#E5E7EB;
 
-    --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    --primary:#111827;
+    --primary-hover:#000000;
 
-    --radius: 22px;
+    --shadow:0 10px 30px rgba(17,24,39,.06);
 
-    --transition: .25s ease;
+    --radius:24px;
+
+    --transition:.25s ease;
+
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme:dark){
 
-    :root {
+:root{
 
-        --bg: #0f1115;
-        --surface: #181b20;
+    --bg:#0F1115;
 
-        --text: #f4f4f5;
-        --text-secondary: #b4b7be;
+    --surface:#171A20;
 
-        --border: #2b3138;
+    --text:#F3F4F6;
 
-        --primary: #ffffff;
-        --primary-hover: #ececec;
+    --muted:#B4BAC4;
 
-        --shadow: none;
+    --border:#2B3138;
 
-    }
+    --primary:#FFFFFF;
+
+    --primary-hover:#ECECEC;
+
+    --shadow:none;
+
+}
 
 }
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+
+margin:0;
+
+padding:0;
+
+box-sizing:border-box;
+
 }
 
 html{
-    scroll-behavior:smooth;
+
+scroll-behavior:smooth;
+
 }
 
 body{
 
-    font-family:'Inter',sans-serif;
+font-family:"Inter",sans-serif;
 
-    background:var(--bg);
+background:var(--bg);
 
-    color:var(--text);
+color:var(--text);
 
-    line-height:1.7;
+line-height:1.7;
 
-    padding:32px 20px 64px;
+padding:36px 22px 72px;
 
 }
 
-main,
 header,
+main,
 footer{
 
-    width:min(680px,100%);
-    margin:auto;
+width:min(700px,100%);
+
+margin:auto;
 
 }
+
+/* HERO */
 
 .hero{
 
-    text-align:center;
+text-align:center;
 
-    margin-bottom:42px;
-
-}
-
-.logo{
-
-    width:88px;
-    height:88px;
-
-    margin:0 auto 28px;
-
-    border-radius:50%;
-
-    background:var(--primary);
-
-    color:var(--bg);
-
-    display:flex;
-
-    align-items:center;
-    justify-content:center;
-
-    font-size:34px;
-    font-weight:700;
-
-    letter-spacing:2px;
+margin-bottom:48px;
 
 }
 
-h1{
+.hero-logo{
 
-    font-size:40px;
+width:92px;
 
-    font-weight:700;
+height:92px;
 
-    margin-bottom:10px;
+margin-bottom:28px;
 
-}
+display:block;
 
-.title{
-
-    font-size:21px;
-
-    color:var(--text-secondary);
-
-    margin-bottom:6px;
+margin-inline:auto;
 
 }
 
-.company{
+.hero h1{
 
-    color:var(--text-secondary);
+font-size:2.6rem;
+
+font-weight:700;
+
+letter-spacing:-.03em;
+
+margin-bottom:10px;
 
 }
+
+.hero-title{
+
+font-size:1.3rem;
+
+color:var(--muted);
+
+margin-bottom:6px;
+
+}
+
+.hero-company{
+
+font-size:1rem;
+
+color:var(--muted);
+
+}
+
+/* BUTTONS */
 
 .actions{
 
-    display:grid;
+display:grid;
 
-    gap:14px;
+gap:14px;
 
-    margin-bottom:34px;
+margin-bottom:42px;
 
 }
 
 .button{
 
-    display:flex;
+display:flex;
 
-    justify-content:center;
-    align-items:center;
+align-items:center;
 
-    min-height:56px;
+justify-content:center;
 
-    background:var(--primary);
+height:58px;
 
-    color:white;
+border-radius:18px;
 
-    text-decoration:none;
+text-decoration:none;
 
-    border-radius:18px;
+font-weight:600;
 
-    font-weight:600;
+background:var(--primary);
 
-    transition:var(--transition);
+color:white;
+
+transition:var(--transition);
+
+border:1px solid transparent;
 
 }
 
-@media (prefers-color-scheme: dark){
+@media(prefers-color-scheme:dark){
 
 .button{
 
-    color:#111;
+color:#111827;
 
 }
 
@@ -180,98 +193,203 @@ h1{
 
 .button:hover{
 
-    transform:translateY(-2px);
+transform:translateY(-2px);
 
-    opacity:.96;
+opacity:.96;
 
 }
 
 .button:active{
 
-    transform:scale(.98);
+transform:scale(.98);
 
 }
 
+.button.secondary{
+
+background:transparent;
+
+color:var(--text);
+
+border:1px solid var(--border);
+
+}
+
+.button.secondary:hover{
+
+background:var(--surface);
+
+}
+
+/* CARDS */
+
 .card{
 
-    background:var(--surface);
+background:var(--surface);
 
-    border:1px solid var(--border);
+border:1px solid var(--border);
 
-    border-radius:var(--radius);
+border-radius:var(--radius);
 
-    box-shadow:var(--shadow);
+padding:28px;
 
-    padding:26px;
+box-shadow:var(--shadow);
 
-    margin-bottom:20px;
+margin-bottom:22px;
 
 }
 
 .card h2{
 
-    font-size:22px;
+font-size:1.4rem;
 
-    margin-bottom:18px;
+margin-bottom:20px;
+
+letter-spacing:-.02em;
 
 }
 
 .card p{
 
-    color:var(--text-secondary);
+color:var(--muted);
 
 }
 
 .card ul{
 
-    padding-left:20px;
+padding-left:22px;
 
 }
 
 .card li{
 
-    margin-bottom:10px;
+margin-bottom:10px;
 
 }
+
+/* TIMELINE */
+
+.timeline-item{
+
+display:grid;
+
+grid-template-columns:120px 1fr;
+
+padding:18px 0;
+
+border-top:1px solid var(--border);
+
+}
+
+.timeline-item:first-of-type{
+
+border-top:none;
+
+padding-top:0;
+
+}
+
+.year{
+
+font-weight:700;
+
+}
+
+.content{
+
+color:var(--muted);
+
+}
+
+/* FOOTER */
 
 footer{
 
-    margin-top:56px;
+margin-top:56px;
 
-    text-align:center;
+padding-top:24px;
 
-    color:var(--text-secondary);
+border-top:1px solid var(--border);
 
-    font-size:14px;
+text-align:center;
+
+color:var(--muted);
+
+font-size:.95rem;
 
 }
+
+/* TABLET */
 
 @media (min-width:768px){
 
 body{
 
-    padding:56px 28px 80px;
+padding:64px 32px 96px;
 
 }
 
 .hero{
 
-    margin-bottom:52px;
+margin-bottom:60px;
 
 }
 
-.logo{
+.hero-logo{
 
-    width:100px;
-    height:100px;
+width:110px;
 
-    font-size:38px;
+height:110px;
 
 }
 
-.button{
+.hero h1{
 
-    font-size:17px;
+font-size:3.4rem;
+
+}
+
+.hero-title{
+
+font-size:1.45rem;
+
+}
+
+.actions{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+/* DESKTOP */
+
+@media (min-width:1100px){
+
+body{
+
+padding-top:72px;
+
+}
+
+.hero-logo{
+
+width:120px;
+
+height:120px;
+
+}
+
+.hero h1{
+
+font-size:3.8rem;
+
+}
+
+.card{
+
+padding:32px;
 
 }
 
