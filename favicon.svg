@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<svg
+xmlns="http://www.w3.org/2000/svg"
+viewBox="0 0 256 256">
+
+<circle
+cx="128"
+cy="128"
+r="116"
+fill="#111827"/>
+
+<path
+d="M82 74V182"
+
+stroke="#ffffff"
+
+stroke-width="14"
+
+stroke-linecap="round"
+
+stroke-linejoin="round"/>
+
+<path
+d="M82 128H126"
+
+stroke="#ffffff"
+
+stroke-width="14"
+
+stroke-linecap="round"
+
+stroke-linejoin="round"/>
+
+<path
+d="M126 74V182"
+
+stroke="#ffffff"
+
+stroke-width="14"
+
+stroke-linecap="round"
+
+stroke-linejoin="round"/>
+
+<path
+d="M144 182L174 74L204 182"
+
+stroke="#ffffff"
+
+stroke-width="14"
+
+stroke-linecap="round"
+
+stroke-linejoin="round"/>
+
+<path
+d="M154 138H194"
+
+stroke="#ffffff"
+
+stroke-width="14"
+
+stroke-linecap="round"
+
+stroke-linejoin="round"/>
+
+</svg>
