@@ -1,18 +1,15 @@
 {
   "name": "Halil AKIN",
-  "short_name": "HA",
-  "description": "Halil AKIN | İş Güvenliği Uzmanı",
+  "short_name": "Halil AKIN",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#F5F5F7",
-  "theme_color": "#111827",
-  "orientation": "portrait",
+  "background_color": "#f7f7f5",
+  "theme_color": "#f7f7f5",
   "icons": [
     {
       "src": "favicon.svg",
       "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any"
+      "type": "image/svg+xml"
     }
   ]
 }

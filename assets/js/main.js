@@ -1,154 +1,74 @@
-"use strict";
-
 /* ==========================================
    Halil AKIN
-   Personal Brand System
-   Version: 2.0.0
+   Personal Website v1.0
 ========================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
-
-    initializeTheme();
-    initializeAnimations();
-    initializeExternalLinks();
-    initializeCurrentYear();
+    initReveal();
+    updateYear();
 
 });
 
-/* ===========================
-   THEME
-=========================== */
 
-function initializeTheme() {
+/* ==========================================
+   YEAR
+========================================== */
 
-    const button = document.getElementById("themeToggle");
+function updateYear(){
 
-    if (!button) return;
+    const year = document.getElementById("year");
 
-    const savedTheme = localStorage.getItem("theme");
+    if(!year) return;
 
-    if (savedTheme === "dark") {
-
-        document.documentElement.classList.add("dark");
-        button.textContent = "☀";
-
-    }
-
-    button.addEventListener("click", () => {
-
-        document.documentElement.classList.toggle("dark");
-
-        const darkMode =
-            document.documentElement.classList.contains("dark");
-
-        localStorage.setItem(
-            "theme",
-            darkMode ? "dark" : "light"
-        );
-
-        button.textContent = darkMode ? "☀" : "☾";
-
-    });
+    year.textContent = new Date().getFullYear();
 
 }
 
-/* ===========================
-   CARD ANIMATION
-=========================== */
+/* ==========================================
+   SCROLL REVEAL
+========================================== */
 
-function initializeAnimations() {
+function initReveal(){
 
-    const cards = document.querySelectorAll(".card");
+    const items = document.querySelectorAll(
 
-    if (!("IntersectionObserver" in window)) return;
+        ".card,.timeline-card,.stat-box,.footer-top"
 
-    const observer = new IntersectionObserver((entries) => {
+    );
 
-        entries.forEach(entry => {
+    if(!("IntersectionObserver" in window)) return;
 
-            if (!entry.isIntersecting) return;
+    const observer = new IntersectionObserver(
 
-            entry.target.animate(
-                [
-                    {
-                        opacity: 0,
-                        transform: "translateY(20px)"
-                    },
-                    {
-                        opacity: 1,
-                        transform: "translateY(0)"
-                    }
-                ],
-                {
-                    duration: 500,
-                    easing: "ease-out",
-                    fill: "forwards"
+        entries=>{
+
+            entries.forEach(entry=>{
+
+                if(entry.isIntersecting){
+
+                    entry.target.classList.add("visible");
+
+                    observer.unobserve(entry.target);
+
                 }
-            );
 
-            observer.unobserve(entry.target);
+            });
 
-        });
+        },
 
-    }, {
-        threshold: 0.15
-    });
+        {
 
-    cards.forEach(card => observer.observe(card));
+            threshold:.15
 
-}
+        }
 
-/* ===========================
-   EXTERNAL LINKS
-=========================== */
+    );
 
-function initializeExternalLinks() {
+    items.forEach(item=>{
 
-    document
-        .querySelectorAll('a[target="_blank"]')
-        .forEach(link => {
+        item.classList.add("hidden");
 
-            link.setAttribute(
-                "rel",
-                "noopener noreferrer"
-            );
-
-        });
-
-}
-
-/* ===========================
-   COPYRIGHT YEAR
-=========================== */
-
-function initializeCurrentYear() {
-
-    const copyright =
-        document.querySelector(".copyright");
-
-    if (!copyright) return;
-
-    copyright.innerHTML =
-        `© ${new Date().getFullYear()} Halil AKIN`;
-
-}
-
-/* ===========================
-   CONSOLE
-=========================== */
-
-console.log(
-    "%cHalil AKIN Personal Website v2.0.0",
-    "color:#111827;font-size:14px;font-weight:bold;"
-);
-
-
-if ("serviceWorker" in navigator) {
-
-    window.addEventListener("load", () => {
-
-        navigator.serviceWorker.register("sw.js")
-            .catch(console.error);
+        observer.observe(item);
 
     });
 

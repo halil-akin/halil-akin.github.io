@@ -1,34 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 256 256"
-    role="img"
-    aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 512 512"
+     fill="none">
 
-    <title id="title">HA Monogram</title>
-    <desc id="desc">
-        Minimal geometric HA monogram for Halil AKIN.
-    </desc>
+  <title>HA Monogram</title>
 
-    <defs>
-        <style>
-            .stroke{
-                fill:none;
-                stroke:#111827;
-                stroke-width:18;
-                stroke-linecap:round;
-                stroke-linejoin:round;
-            }
-        </style>
-    </defs>
+  <!-- H -->
+  <path
+    d="M128 96V416
+       M232 96V416
+       M128 256H232"
+    stroke="#171717"
+    stroke-width="18"
+    stroke-linecap="round"
+    stroke-linejoin="round"/>
 
-    <!-- H -->
-    <path class="stroke" d="M48 44V212" />
-    <path class="stroke" d="M108 44V212" />
-    <path class="stroke" d="M48 128H108" />
+  <!-- A -->
+  <path
+    d="M292 416L392 96L492 416
+       M328 290H456"
+    stroke="#171717"
+    stroke-width="18"
+    stroke-linecap="round"
+    stroke-linejoin="round"/>
 
-    <!-- A -->
-    <path class="stroke" d="M146 212L182 44L218 212" />
-    <path class="stroke" d="M160 144H204" />
+  <!-- Signature Curve -->
+  <path
+    d="M130 170
+       C205 170,
+         270 195,
+         330 250
+       S430 345,
+         488 332"
+    stroke="#C8A96A"
+    stroke-width="12"
+    stroke-linecap="round"
+    fill="none"/>
 
 </svg>
